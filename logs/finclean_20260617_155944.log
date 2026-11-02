@@ -1,0 +1,42 @@
+2026-06-17 15:59:44 - finclean - INFO - ==================================================
+2026-06-17 15:59:44 - finclean - INFO - 金融文本智能清洗工具启动
+2026-06-17 15:59:44 - finclean - INFO - ==================================================
+2026-06-17 16:02:05 - finclean - INFO - 选择文件: D:/python/finclean/raw/reviews.xlsx
+2026-06-17 16:02:08 - finclean - INFO - 开始基础清洗
+2026-06-17 16:02:08 - finclean - ERROR - 清洗流程异常: ['content']
+Traceback (most recent call last):
+  File "D:\python\finclean\backend\main.py", line 35, in run
+    df_cleaned = cleaner.clean_all(self.df)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\finclean\backend\basic_cleaner.py", line 21, in clean_all
+    df = self.remove_missing(df)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\finclean\backend\basic_cleaner.py", line 35, in remove_missing
+    df = df.dropna(subset=['content'])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\pandas\core\frame.py", line 6692, in dropna
+    raise KeyError(np.array(subset)[check].tolist())
+KeyError: ['content']
+2026-06-17 16:02:14 - finclean - INFO - 开始基础清洗
+2026-06-17 16:02:14 - finclean - ERROR - 清洗流程异常: ['content']
+Traceback (most recent call last):
+  File "D:\python\finclean\backend\main.py", line 35, in run
+    df_cleaned = cleaner.clean_all(self.df)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\finclean\backend\basic_cleaner.py", line 21, in clean_all
+    df = self.remove_missing(df)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\finclean\backend\basic_cleaner.py", line 35, in remove_missing
+    df = df.dropna(subset=['content'])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\pandas\core\frame.py", line 6692, in dropna
+    raise KeyError(np.array(subset)[check].tolist())
+KeyError: ['content']
+2026-06-17 16:02:21 - finclean - INFO - 选择文件: D:/python/finclean/raw/新建 文本文档.txt
+2026-06-17 16:02:25 - finclean - INFO - 开始基础清洗
+2026-06-17 16:02:25 - finclean - INFO - 清洗完成报告: {'总处理数': 10, '成功清洗数': 10, '失败数': 0, '耗时(秒)': 0.01, '成功率': '100.00%'}
+2026-06-17 16:02:25 - finclean - INFO - 清洗完成，共10条数据
+2026-06-17 16:02:29 - finclean - INFO - 开始基础清洗
+2026-06-17 16:02:29 - finclean - INFO - 启动LLM清洗
+2026-06-17 16:05:46 - finclean - INFO - 清洗完成报告: {'总处理数': 10, '成功清洗数': 10, '失败数': 0, '耗时(秒)': 196.2, '成功率': '100.00%'}
+2026-06-17 16:05:46 - finclean - INFO - 清洗完成，共10条数据

@@ -1,0 +1,76 @@
+2026-06-17 18:21:31 - finclean - INFO - ==================================================
+2026-06-17 18:21:31 - finclean - INFO - 金融文本智能清洗工具启动
+2026-06-17 18:21:31 - finclean - INFO - ==================================================
+2026-06-17 18:21:38 - finclean - INFO - 选择文件: D:/python/finclean/raw/test_expected_results.csv
+2026-06-17 18:21:44 - finclean - ERROR - 启动失败: Error tokenizing data. C error: EOF inside string starting at row 4
+Traceback (most recent call last):
+  File "d:\python\finclean\backend\main.py", line 162, in start_cleaning
+    df = reader.read_file(self.file_path)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python\finclean\backend\file_reader.py", line 25, in read_file
+    return self._read_csv(p)
+           ^^^^^^^^^^^^^^^^^
+  File "d:\python\finclean\backend\file_reader.py", line 80, in _read_csv
+    df = pd.read_csv(p, encoding='utf-8')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\pandas\io\parsers\readers.py", line 626, in _read
+    return parser.read(nrows)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\pandas\io\parsers\readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "pandas/_libs/parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: EOF inside string starting at row 4
+2026-06-17 18:21:52 - finclean - INFO - 选择文件: D:/python/finclean/raw/test_semantic_clean.csv
+2026-06-17 18:21:53 - finclean - INFO - 开始基础清洗
+2026-06-17 18:21:53 - finclean - INFO - 清洗完成报告: {'总处理数': 13, '成功清洗数': 13, '失败数': 0, '耗时(秒)': 0.0, '成功率': '100.00%'}
+2026-06-17 18:21:55 - finclean - INFO - 清洗完成，共13条数据
+2026-06-17 18:24:20 - finclean - INFO - 开始基础清洗
+2026-06-17 18:24:20 - finclean - INFO - 启动LLM清洗
+2026-06-17 18:26:32 - finclean - INFO - 清洗完成报告: {'总处理数': 13, '成功清洗数': 13, '失败数': 0, '耗时(秒)': 131.57, '成功率': '100.00%'}
+2026-06-17 18:26:32 - finclean - INFO - 清洗完成，共13条数据
+2026-06-17 18:27:35 - finclean - INFO - 选择文件: D:/python/finclean/raw/test_expected_results.csv
+2026-06-17 18:27:37 - finclean - ERROR - 启动失败: Error tokenizing data. C error: EOF inside string starting at row 4
+Traceback (most recent call last):
+  File "d:\python\finclean\backend\main.py", line 162, in start_cleaning
+    df = reader.read_file(self.file_path)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python\finclean\backend\file_reader.py", line 25, in read_file
+    return self._read_csv(p)
+           ^^^^^^^^^^^^^^^^^
+  File "d:\python\finclean\backend\file_reader.py", line 80, in _read_csv
+    df = pd.read_csv(p, encoding='utf-8')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\pandas\io\parsers\readers.py", line 626, in _read
+    return parser.read(nrows)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\pandas\io\parsers\readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "pandas/_libs/parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: EOF inside string starting at row 4
+2026-06-17 18:27:48 - finclean - INFO - 选择文件: D:/python/finclean/raw/reviews.xlsx
+2026-06-17 18:27:49 - finclean - INFO - 开始基础清洗
+2026-06-17 18:27:49 - finclean - INFO - 启动LLM清洗
+2026-06-17 18:29:19 - finclean - INFO - 清洗完成报告: {'总处理数': 9, '成功清洗数': 9, '失败数': 0, '耗时(秒)': 89.31, '成功率': '100.00%'}
+2026-06-17 18:29:19 - finclean - INFO - 清洗完成，共9条数据
